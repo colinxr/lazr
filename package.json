@@ -2,14 +2,33 @@
   "name": "lazr",
   "version": "1.0.0",
   "description": "lazy load modole for Article",
-  "main": "src/lazr.js",
+  "main": "dist/lazr.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier",
+    "lint": "eslint --fix src/*.js test/*.js",
+    "dev": "NODE_ENV=development webpack",
+    "build": "NODE_ENV=production webpack"
   },
   "keywords": [
     "lazy",
     "load"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/colinxr/lazr.git"
+  },
   "author": "Colin Rabyniuk",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^6.8.0",
+    "prettier": "^1.19.1",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
+  }
 }
